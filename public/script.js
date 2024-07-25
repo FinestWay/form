@@ -9,7 +9,7 @@ form.addEventListener('submit', async (e) => {
     const div = document.getElementById("#div")
     const projectTitle = document.getElementById("#projectTitle")
 
-    const response = await fetch('http://localhost:3000/submit', {
+    const response = await fetch('http://localhost:8000/submit', {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'
