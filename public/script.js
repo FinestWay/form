@@ -1,27 +1,26 @@
-const form = document.getElementById("#projectForm")
+const form = document.getElementById('projectForm')
 
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  e.preventDefault()
 
-    const name = document.getElementById("#name")
-    const email = document.getElementById("#email")
-    const rollno = document.getElementById("#rollno")
-    const div = document.getElementById("#div")
-    const projectTitle = document.getElementById("#projectTitle")
+  const name = document.getElementById("name").value; 
+  const email = document.getElementById("email").value; 
+  const div = document.getElementById("div").value; 
+  const rollno = document.getElementById("rollno").value; 
+  const projectTitle = document.getElementById("projectTitle").value; 
 
-    const response = await fetch('http://localhost:8000/submit', {
-        method: 'POST',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({name, email, rollno, div, projectTitle})
-    });
+  const response = await fetch('http://localhost:3000/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name, email, rollno, div, projectTitle })
+  })
 
-    const result = await response.json();
-    if(result.success){
-        alert("Project Submitted Successfully")
-    } else{
-        alert("Error Submitting project")
-    }
-
+  const result = await response.json()
+  if (result.success) {
+    alert('Project Submitted Successfully')
+  } else {
+    alert('Error Submitting project')
+  }
 })

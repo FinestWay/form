@@ -1,23 +1,34 @@
 const express = require('express');
 const mongoose = require('mongoose')
+const path = require('path')
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
+const file = path.join(__dirname, '../public')
 
 //middleware
 app.use(bodyParser.json());
-app.use(express.static('../public'))
+app.use(express.static(file));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
+
+const mongoUri = process.env.MONGO_URI;
+if (!mongoUri) {
+  console.error('MONGO_URI is not defined in .env file')
+  process.exit(1)
+}
+
+console.log('MONGO_URI:', process.env.MONGO_URI)
+
+mongoose.connect(mongoUri)
 .then(() => { console.log("MongoDB connected");})
-.catch((err) => { console.log(err || "Not connected");});
+.catch((err) => { console.log(err || "Not connected");})
 
 // MongoDB Schema
 const User = require("./models/user")
-
+ 
 // API Endpoint
 app.post('/submit', async (req,res) => {
     const { name, email, projectTitle, div , rollno } = req.body;
@@ -42,6 +53,10 @@ app.post('/submit', async (req,res) => {
         res.status(500).json({ success: false, message: "Error Submitting the form"})
     }
 });
+
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
 
 // Starting the server
 app.listen(port, () => console.log(`server is running on port ${port}`));
