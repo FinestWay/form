@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(143, 7, 167, 1) 0%,
+    rgba(212, 70, 252, 1) 0%
+  );
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #c49696;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(43, 42, 42);
+  margin-top: 10px;
+  font-size: 2.2rem;
+  background-image: url("./images/galaxy.gif");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: rgb(7, 7, 7);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+input {
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #a77b7b;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #2e312f;
+  color: rgb(241, 241, 241);
+  font-size: 1.2rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+button:hover {
+  background-color: #0e1b11;
+}
