@@ -14,10 +14,16 @@ body {
 }
 
 .form-container {
+  background: rgb(167, 7, 155);
+  background: linear-gradient(
+    90deg,
+    rgba(167, 7, 155, 0.6727065826330532) 0%,
+    rgb(105, 6, 218) 100%
+  );
   width: 300px;
   margin: 50px auto;
   padding: 30px;
-  border: 1px solid #c49696;
+  border: none;
   border-radius: 5px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.18);
 }
@@ -31,16 +37,13 @@ h1 {
   text-decoration-color: rgb(43, 42, 42);
   margin-top: 10px;
   font-size: 2.2rem;
-  /* background-image: url("./images/galaxy.gif");
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text; */
 }
 
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: rgb(7, 7, 7);
+  color: rgb(255, 255, 255);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -49,8 +52,10 @@ input {
   border-radius: 3px;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #a77b7b;
+  border: 1px solid #adadad;
+  background-color:rgb(235, 235, 235) ;
   outline: none;
+  color: white;
 }
 
 button {
