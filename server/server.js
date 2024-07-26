@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path')
 const bodyParser = require('body-parser');
+const cors = require('cors')
+
 require('dotenv').config();
 
 const app = express();
@@ -9,6 +11,7 @@ const port = process.env.PORT || 3000;
 const file = path.join(__dirname, '../public')
 
 //middleware
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(file));
 
