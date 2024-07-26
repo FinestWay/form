@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongodb": "^6.8.0",
@@ -18,7 +19,6 @@
     "nodemon": "^3.1.4",
     "typed.js": "^2.1.0"
   },
-  "devDependencies": {},
   "description": "",
   "engines": {
     "node": ">=18.18.0 <19.0.0"
