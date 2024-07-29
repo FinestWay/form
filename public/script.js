@@ -27,6 +27,8 @@ form.addEventListener('submit', async e => {
     form.div.value = ''
     form.rollno.value = ''
     form.projectTitle.value = ''
+
+    window.location.href = `../pages/success.html`
   } else {
     alert('Error Submitting project')
   }
