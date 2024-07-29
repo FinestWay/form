@@ -19,8 +19,6 @@ form.addEventListener('submit', async e => {
 
   const result = await response.json()
   if (result.success) {
-    alert('Project Registered Successfully')
-
     // clearing all the values
     document.getElementById('name').value = ''
     document.getElementById('email').value = ''
