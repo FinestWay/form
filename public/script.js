@@ -19,14 +19,13 @@ form.addEventListener('submit', async e => {
 
   const result = await response.json()
   if (result.success) {
+    alert("Project Registered Successfully")
     // clearing all the values
     document.getElementById('name').value = ''
     document.getElementById('email').value = ''
     document.getElementById('div').value = ''
     document.getElementById('rollno').value = ''
     document.getElementById('projectTitle').value = ''
-
-    window.location.href = `./pages/success.html`
   } else {
     alert('Error Submitting project')
   }
