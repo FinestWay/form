@@ -51,7 +51,7 @@ app.post('/submit', async (req,res) => {
 
     try{
         await newUser.save();
-        res.status(201).json({ success: true, message: 'Project Submitted Successfully'})
+        res.status(201).json({ success: true, message: 'Project Submitted Successfully', redirectUrl: `../public/pages/success.html`})
     } catch(error) {
         res.status(500).json({ success: false, message: "Error Submitting the form"})
     }
