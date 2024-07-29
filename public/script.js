@@ -22,13 +22,13 @@ form.addEventListener('submit', async e => {
     alert('Project Registered Successfully')
 
     // clearing all the values
-    form.name.value = ''
-    form.email.value = ''
-    form.div.value = ''
-    form.rollno.value = ''
-    form.projectTitle.value = ''
+    document.getElementById('name').value = ''
+    document.getElementById('email').value = ''
+    document.getElementById('div').value = ''
+    document.getElementById('rollno').value = ''
+    document.getElementById('projectTitle').value = ''
 
-    window.location.href = `../pages/success.html`
+    window.location.href = `./pages/success.html`
   } else {
     alert('Error Submitting project')
   }
